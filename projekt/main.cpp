@@ -44,19 +44,7 @@ void funkcjaK()
 	float delta,deltap,a,b,c,xi,xii;
 		cout<<"Podaj A"<<endl;
 	cin >> a;
-	if(a==0)
-	{
-		cout<<"jesli a=0 to to jest funkcja liniowa"<<endl;
-		funkcjal();
-	}
-		cout<<"Podaj B"<<endl;
-	cin >> b;
-		cout<<"Podaj C"<<endl;
-	cin >> c;
-	if(a==0)
-	{
-		funkcjal();
-	}
+
 	else{
 		
 		delta=b*b-4*a*c;
