@@ -3,21 +3,36 @@
 using namespace std;
 void funkcjal();
 void funkcjaK();
+void funkcjaP();
+void zamien();
 int main(int argc, char** argv) {
 	int W;
-	cout<<"Wybierz funkcje"<<endl<<"[1] Funkcja liniowa  ax+b [2] Funkcja Kwadratowa Ax+By+C"<<endl;
+	cout<<"Wybierz funkcje:"<<endl<<"[1] Funkcja liniowa  ax+b"<<endl<<"[2] Funkcja Kwadratowa Ax+By+C "<<endl<<"[3] Postac kanoniczna A(X-P)^2+Q" <<endl<<"[4]Zamien funkcje kwadratowa na liniowa i kanoniczna" <<endl;
 	cin>>W;
-	if(W==1)
+	switch(W)
+	case 1:
+	{
 	{
 		 funkcjal();
+		  break;
 	}
-	else if(W==2)
+	case 2:
 	{
 		 funkcjaK();
+		  break;
 	}
-
+	case 3:
+	{
+		 funkcjaP();
+		  break;
+	}
+	case 4:
+	{
+		 zamien();
+		  break;
+	}
 }
-
+}
 void funkcjal()
 {
 	cout<<"Funkcja Liniowa"<<endl;
@@ -27,7 +42,7 @@ void funkcjal()
 	if(a==0)
 	{
 	cout<< "nie ma miejsc zerowych";
-		
+
 	}
 	else{
 	
@@ -79,4 +94,47 @@ void funkcjaK()
 		
 		
 	}	
+}
+void funkcjaP()
+{
+	cout<<"Funkcja Kanoniczna"<<endl;
+	float xi,xii,q,p,a,h;
+			cout<<"Podaj A"<<endl;
+	cin >> a;
+		cout<<"Podaj Q"<<endl;
+	cin >> q;
+			cout<<"Podaj P"<<endl;
+	cin >> p;
+	h=-q/a;
+	if(h<0)
+	{
+	cout<<"nie ma miejsc zerowych"<<endl;	
+	}
+	else{
+	xi=p+sqrt(h);
+	xii=p-sqrt(h);
+}
+	cout <<"miejsce zerowe to:"<<xi<<" oraz "<<xii<<endl;
+}
+void zamien()
+{
+	cout<<"Podaj Funkcja Kwadratowa"<<endl;
+	float a,b,c,q,p,delta;
+	
+	cout<<"a"<<endl;
+		cin>>a;
+	cout<<"b"<<endl;
+		cin>>b;
+	cout<<"c"<<endl;
+		cin>>c;
+		
+		cout<<endl<<"Funkcja Kwadratowa-> kanoniczna"<<endl;
+		delta=b*b-4*a*c;
+		p=(-b)/(2*a);
+		q=(-delta)/(4*a);
+		cout<<"f(x)="<<a<<"(x-["<<p<<"])^2+["<<q<<"]"<<endl;
+		
+		
+
+	
 }
