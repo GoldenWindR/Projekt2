@@ -5,7 +5,7 @@ void funkcjal();
 void funkcjaK();
 int main(int argc, char** argv) {
 	int W;
-	cout<<"jaka funkacja wariacie ?"<<endl<<"[1] ax+b [2]Ax+By+C"<<endl;
+	cout<<"Wybierz funkcje"<<endl<<"[1] Funkcja liniowa  ax+b [2] Funkcja Kwadratowa Ax+By+C"<<endl;
 	cin>>W;
 	if(W==1)
 	{
