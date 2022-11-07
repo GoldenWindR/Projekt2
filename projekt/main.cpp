@@ -3,30 +3,21 @@
 using namespace std;
 void funkcjal();
 void funkcjaK();
-void funkcjaP();
 int main(int argc, char** argv) {
 	int W;
-	cout<<"Wybierz funkcje:"<<endl<<"[1] Funkcja liniowa  ax+b"<<endl<<"[2] Funkcja Kwadratowa Ax+By+C "<<endl<<"[3] Postac kanoniczna A(X-P)^2+Q" <<endl;
+	cout<<"Wybierz funkcje"<<endl<<"[1] Funkcja liniowa  ax+b [2] Funkcja Kwadratowa Ax+By+C"<<endl;
 	cin>>W;
-	switch(W)
-	case 1:
-	{
+	if(W==1)
 	{
 		 funkcjal();
-		  break;
 	}
-	case 2:
+	else if(W==2)
 	{
 		 funkcjaK();
-		  break;
 	}
-	case 3:
-	{
-		 funkcjaP();
-		  break;
-	}
+
 }
-}
+
 void funkcjal()
 {
 	cout<<"Funkcja Liniowa"<<endl;
@@ -36,7 +27,7 @@ void funkcjal()
 	if(a==0)
 	{
 	cout<< "nie ma miejsc zerowych";
-
+		
 	}
 	else{
 	
@@ -89,25 +80,3 @@ void funkcjaK()
 		
 	}	
 }
-void funkcjaP()
-{
-	cout<<"Funkcja Kanoniczna"<<endl;
-	float xi,xii,q,p,a,h;
-			cout<<"Podaj A"<<endl;
-	cin >> a;
-		cout<<"Podaj Q"<<endl;
-	cin >> q;
-			cout<<"Podaj P"<<endl;
-	cin >> p;
-	h=-q/a;
-	if(h<0)
-	{
-	cout<<"nie ma miejsc zerowych"<<endl;	
-	}
-	else{
-	xi=p+sqrt(h);
-	xii=p-sqrt(h);
-}
-	cout <<"miejsce zerowe to:"<<xi<<" oraz "<<xii<<endl;
-}
-
